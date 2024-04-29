@@ -676,7 +676,7 @@ void ACLSetSelectorCommandBitsForCategory(dict *commands, aclSelector *selector,
     while ((de = dictNext(di)) != NULL) {
         struct redisCommand *cmd = dictGetVal(de);
         if (cmd->acl_categories & cflag) {
-            ACLChangeSelectorPerm(selector,cmd,value);
+          
         }
         if (cmd->subcommands_dict) {
             ACLSetSelectorCommandBitsForCategory(cmd->subcommands_dict, selector, cflag, value);
